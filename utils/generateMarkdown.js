@@ -1,14 +1,19 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+const addBadge = licenseChoice => {
+  if (licenseChoice == 'Apache License 2.0') {
+    return `
+![apache](https://img.shields.io/badge/license-Apache%20License%202.0-blue)
+    `;
+  } else if (licenseChoice == 'ISC License') {
+    return `
+![isc](https://img.shields.io/badge/license-ISC%20License-purple)
+    `;
+  } else {
+    return `
+![mit](https://img.shields.io/badge/license-MIT%20License-red)
+    `;
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
