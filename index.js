@@ -1,10 +1,26 @@
 // TODO: Include packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown');
 // install and require inquirer
-// require fs
 
+// require fs
+const fs = require('fs');
+const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [{
+    type: 'input',
+    name: 'title',
+    message: 'Enter the project title: (REQUIRED)',
+    validate: titleInput => {
+        if (titleInput) {
+            return true;
+        } else {
+            console.log('Please enter a project title!');
+            return false;
+        }
+    }
+},
+
+];
 
 // TODO: Create a function to initialize app
 function init() {
