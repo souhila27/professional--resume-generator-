@@ -119,6 +119,26 @@ const questions = [
     },
 ];
 
+const promptUser = () => {
+    return inquirer.prompt(questions);
+}
+
+// function to write README file
+function writeToFile(data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/README.md', data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'Readme file created!'
+            })
+        })
+    })
+}
+
 // TODO: Create a function to initialize app
 function init() {
     // ask the user the questions - inquirer
@@ -130,6 +150,19 @@ function init() {
     // -- -- pass in the string w/ you markdown into that writefile
 
     // then you add the answers to the markdown creation function
+    promptUser()
+    .then(questions => {
+        return generateMarkdown(questions);
+    })
+    .then(formattedPage => {
+        return writeToFile(formattedPage);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    })
 }
 
 // Function call to initialize app
