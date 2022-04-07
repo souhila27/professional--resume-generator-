@@ -133,7 +133,7 @@ function writeToFile(data) {
             }
             resolve({
                 ok: true,
-                message: 'Readme file created!'
+                message: 'Readme file was successfully created!'
             })
         })
     })

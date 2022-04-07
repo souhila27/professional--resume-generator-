@@ -5,13 +5,13 @@
     
 
   ## Description
-  kjdsfiyut
+  creating a weather dashbord for users who like to travel a lot so they can plan their trip accordingly
   
   ## Installation
-  jkefyer8
+  html css javascript JQuery ..
 
    ## Usage
-   etfrear7o
+   ..
   
   ## License
   
@@ -23,11 +23,11 @@ This application is covered by the MIT License, the terms of which can be found 
   ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
   
   ## Contribute
-  hgfyru
+  made to search for multiple city at the same time and display the weather for five days
   
   ## Tests
-  jgtr7ry
+  see the diffrent temperture 
   ## Questions
  [GitHub Profile](https://github.com/souhila27/) 
- lpodi
+ https://github.com/souhila27/
 
